@@ -19,37 +19,43 @@ app.set('views', 'views');
 
 app.get('/', (req, res) => {
 	res.render('home', {
-		title: 'Pets Hospital'
+		title: 'Pets Hospital',
+		isHome: true
 	})
 })
 
 app.get('/aboutUs', (req, res) => {
 	res.render('aboutUs', {
-		title: 'About Us'
+		title: 'About Us',
+		isAboutUs: true
 	})
 })
 
 app.get('/contactUs', (req, res) => {
 	res.render('contactUs', {
-		title: 'Contact Us'
+		title: 'Contact Us',
+		isContactUs: true
 	})
 })
 
 app.get('/gallery', (req, res) => {
 	res.render('gallery', {
-		title: 'Galery'
+		title: 'Galery', 
+		isGalery: true
 	})
 })
 
 app.get('/services', (req, res) => {
 	res.render('services', {
-		title: 'Services'
+		title: 'Services',
+		isServices: true
 	})
 })
 
 app.get('/team', (req, res) => {
 	res.render('team', {
-		title: 'Team'
+		title: 'Team', 
+		isTeam: true
 	})
 })
 
