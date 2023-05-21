@@ -3,13 +3,42 @@
 	<div class=" mb-2 mt-4">
 		<img class=" ml-3 h-6" src="/image/logo.png" alt="logo">
 	</div>
-	<ul class=" flex gap-4">
-		<li ><a href="/">Home</a></li>
-		<li><a href="aboutUs">About Us</a></li>
-		<li><a href="services">Services</a></li>
-		<li><a href="gallery">Gallery</a></li>
-		<li><a href="team">Team</a></li>
-		<li><a href="/contactUs">Contact Us</a></li>
+	<ul class=" items-center flex gap-4">
+		{{#if isHome}}
+			<li class="active-nav-element nav-element-hover " ><a href="/">Home</a></li>
+		{{else}}
+		 	<li class="nav-element-hover " ><a href="/">Home</a></li>
+		{{/if}}
+
+		{{#if isAboutUs}}
+			<li class="active-nav-element nav-element-hover"><a href="aboutUs">About Us</a></li>
+		{{else}}
+			<li class=" nav-element-hover"><a href="aboutUs">About Us</a></li>
+		{{/if}}
+
+		{{#if isServices}}
+			<li class="active-nav-element nav-element-hover" ><a href="services">Services</a></li>
+		{{else}}
+			<li class=" nav-element-hover" ><a href="services">Services</a></li>
+		{{/if}}
+		
+		{{#if isGalery}}
+			<li class="active-nav-element nav-element-hover"><a href="gallery">Gallery</a></li>
+		{{else}}
+			<li class=" nav-element-hover"><a href="gallery">Gallery</a></li>
+		{{/if}}
+		
+		{{#if isTeam}}
+			<li class="active-nav-element nav-element-hover"><a href="team">Team</a></li>
+		{{else}}
+			<li class=" nav-element-hover"><a href="team">Team</a></li>
+		{{/if}}
+		
+		{{#if isContactUs}}
+			<li class="active-nav-element nav-element-hover"><a href="/contactUs">Contact Us</a></li>
+		{{else}} 
+			<li class=" nav-element-hover"><a href="/contactUs">Contact Us</a></li>
+		{{/if}}
 	</ul>
 </nav>
 </div>
